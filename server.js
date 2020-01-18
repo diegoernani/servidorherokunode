@@ -7,9 +7,6 @@ const PORT = process.env.PORT || 8877;
 // Then
 server.use(express.static(process.env.PWD + '/public'));
 
-
-
-
 server.get('/', (req, res) => {
   res.send('Oi!');
 //   res.send(`<!DOCTYPE html>
