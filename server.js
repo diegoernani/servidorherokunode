@@ -66,7 +66,7 @@ server.get('/', (req, res) => {
       <a href="https://www.facebook.com/diegoernanisa"><i class="fa fa-facebook"></i></a> 
     </div>
     <p>
-    <a href="https://diegoernani.pro"><button>Contato</button></a></p>
+    <a href="./contato"><button>Contato</button></a></p>
   </div>
   
   </body>
@@ -176,7 +176,7 @@ server.get('/contato', (req, res) => {
     </head>
     <body>
     
-    <h1>Formulário Teste</h1>
+    <h1>Contato</h1>
     
     <form action="#" method="post">
     <fieldset>
@@ -237,18 +237,20 @@ server.get('/contato', (req, res) => {
           <input type="checkbox" name="newsletter" value="1"> Gostaria de receber a Newsletter da empresa
         </label>
       </div>
-      
       <button class="botao submit" type="submit" name="submit">Enviar</button>
-      
     </fieldset>
     </form>
     
     </body>
     </html>`
   )
+
+
 });
 
-
+server.post('/contato', (req, res) => {
+  res.redirect('/'); 
+});
 
 server.listen(PORT, () => {
   console.log('Servidor encontrado.');
