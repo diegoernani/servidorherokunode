@@ -2,6 +2,7 @@ const express = require('express');
 const server = express();
 // At the top of your server.js
 process.env.PWD = process.cwd()
+const PORT = process.env.PORT || 8877;
 
 // Then
 server.use(express.static(process.env.PWD + '/public'));
@@ -254,6 +255,6 @@ server.get('/contato', (req, res) => {
 
 
 
-server.listen(3001, () => {
+server.listen(PORT, () => {
   console.log('Servidor encontrado.');
 });
